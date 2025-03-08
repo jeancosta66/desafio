@@ -1,14 +1,11 @@
 #faça um algorítimo que mostre a tabuada de 1 a 5
 
-print("digitir um numero para aparecer na tabuada")
-numero = int(input())
-print('{} x {:2} = {}'.format(numero, 1, numero*1))
-print('{} x {:2} = {}'.format(numero, 2, numero*2))
-print('{} x {:2} = {}'.format(numero, 3, numero*3))
-print('{} x {:2} = {}'.format(numero, 4, numero*4))
-print('{} x {:2} = {}'.format(numero, 5, numero*5))
-print('{} x {:2} = {}'.format(numero, 6, numero*6))
-print('{} x {:2} = {}'.format(numero, 7, numero*7))
-print('{} x {:2} = {}'.format(numero, 8, numero*8))
-print('{} x {:2} = {}'.format(numero, 9, numero*9))
-print('{} x {:2} = {}'.format(numero, 10, numero*10))
+print("Digite ok para mostrar tabuada!")
+ok = input().strip().lower() # Remover o expaço em branco (extras) e converte para minúsculo
+if ok == "ok":
+    for numero in range(1, 6): # Primeiro for para os números de 1 a 5
+        print(f"\nTabuada do {numero}:") # Exibe qual tabuada está sendo mostrada
+        for i in range(1, 11): # Segundo for para multiplicar de 1 a 10 
+             print(f"{numero} x {i} = {numero * i}")        
+else: 
+    print("Você não digitou 'ok', então não será exibida a tabuada.")
